@@ -660,45 +660,49 @@ export const INSTRUCTIONS_DATA: InstructionItem[] = [
   {
     id: 15,
     stepNumber: 15,
-    originalText: '15. Colocar no Padlet da turma os trabalhos realizados.',
+    originalText: '15. Sugestão: Inserir imagens na folha para ilustrar a placa (símbolos de reciclagem, caixas de papelão ou garrafas de plástico);',
     phase: 'conclusao',
-    category: 'share',
-    tag: 'Partilha · Entregar no Padlet',
-    kidExplanation: 'Trabalho pronto! Vai ao cabeçalho azul Ficheiro > Guardar Como (ou carrega no disquete 💾 no topo). Depois abre o link do Padlet da turma, clica no botão (+) cor-de-rosa e envia o teu ficheiro!',
+    category: 'decor',
+    tag: 'Criatividade · Inserir Imagens',
+    kidExplanation: 'Dica espetacular da professora: No cabeçalho Inserir, clica em Imagens para colocares na folha o símbolo da reciclagem ♻️ ou desenhos de garrafas e caixas! Segredo de informática: Clica na imagem com o botão direito ➔ Moldar Texto ➔ Em Frente do Texto para a poderes arrastar com o rato para onde quiseres!',
     wordAction: {
-      tabName: 'Ficheiro',
-      groupName: 'Guardar e Enviar',
-      iconType: 'save-padlet',
-      highlightButtonName: 'Ficheiro > Guardar Como e depois botão (+) no Padlet',
-      simpleKidHint: 'No Word clica em Ficheiro > Guardar. Depois abre o Padlet e clica no botão (+) para enviar!',
+      tabName: 'Inserir',
+      groupName: 'Ilustrações',
+      iconType: 'insert-images',
+      highlightButtonName: 'Separador Inserir > Imagens (ou ClipArt / Formas)',
+      simpleKidHint: 'Clica em Inserir > Imagens para colocar imagens ou símbolos. Depois encolhe pelas bolinhas dos cantos!',
     },
     example: {
-      title: 'Enviar o trabalho para o Padlet',
-      wordTab: 'Separador Ficheiro > Guardar Como e depois navegador com o Padlet',
-      shortcut: 'Atalho para guardar no Word: Ctrl + S',
-      explanation: 'No Padlet, o teu trabalho vai ficar visível para toda a turma e a professora pode dar-te os parabéns!',
+      title: 'Inserir Imagens e Símbolos de Reciclagem',
+      wordTab: 'Separador Inserir > Grupo Ilustrações > Imagens',
+      shortcut: 'Botão direito na imagem > Moldar Texto > Em Frente do Texto',
+      explanation: 'Podes colocar imagens que combinem com cada ecoponto: caixas e livros no Papelão, ou garrafas e latas no Plástico. Fica com o aspeto de um cartaz profissional!',
       recommendedValues: [
-        'Nome do ficheiro: Ecopontos_TeuNome_5B.docx',
-        'Título no Padlet: O teu Nome Completo e Número'
+        'Símbolo oficial de reciclagem (as 3 setas de Möbius ♻️)',
+        'Caixa de papelão ou jornais para a folha do Papelão',
+        'Garrafa de plástico ou pacote de sumo para a folha do Plástico'
       ],
-      visualPreviewType: 'padlet',
+      visualPreviewType: 'decor',
       dosList: [
-        'Guarda sempre o ficheiro no computador antes de fechar o Word!',
-        'Escreve o teu nome completo no título da publicação.'
+        'Clica na imagem com o botão direito e escolhe: Moldar Texto > Em Frente do Texto (assim ela mexe-se livremente sem estragar o texto!).',
+        'Puxa sempre pelas bolinhas dos 4 cantos da imagem para ela encolher sem ficar deformada.',
+        'Coloca uma imagem de cada lado da palavra para ficar equilibrado.'
       ],
       dontsList: [
-        'Não feches o Word sem guardar o trabalho!',
-        'Não te esqueças de carregar em Publicar no Padlet.'
+        'Não puxes pelas bolinhas dos lados da imagem, senão a garrafa fica achatada ou esticada!',
+        'Não coloques imagens gigantes que tapem a palavra principal.'
       ],
       sampleVisual: {
-        label: 'Publicação pronta no Padlet da turma:',
-        text: 'Mural Padlet da Turma\nPublicado por: Maria Silva (5.º B)\nFicheiro: Placas_Ecoponto_Maria_5B.docx',
-        textColor: '#0f172a',
-        bgColor: '#ffffff',
-        borderColor: '#10b981',
-        fontFamily: 'Arial, sans-serif',
-        fontSize: '18px',
-        isLandscape: true
+        label: 'Placa com imagens de resíduos e símbolo de reciclagem:',
+        text: '♻️ PAPELÃO ♻️\n5.º Ano — Turma B',
+        textColor: '#1E40AF',
+        bgColor: '#EFF6FF',
+        borderColor: '#2563EB',
+        fontFamily: 'Arial Black, sans-serif',
+        fontSize: '48px',
+        isLandscape: true,
+        hasDecorations: true,
+        decorItems: ['🖼️ Símbolo Reciclagem', '📦 Caixa Cartão', '📰 Jornais Limpos']
       }
     }
   }

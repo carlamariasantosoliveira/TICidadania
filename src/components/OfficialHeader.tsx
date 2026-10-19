@@ -4,8 +4,8 @@ import { Printer, Sparkles, CheckCircle2 } from 'lucide-react';
 interface OfficialHeaderProps {
   completedStepsCount: number;
   totalStepsCount: number;
-  activeTab: 'ficha' | 'simulador' | 'galeria' | 'video' | 'imprimir';
-  onTabChange: (tab: 'ficha' | 'simulador' | 'galeria' | 'video' | 'imprimir') => void;
+  activeTab: 'ficha' | 'simulador' | 'galeria' | 'video' | 'imprimir' | 'imagens';
+  onTabChange: (tab: 'ficha' | 'simulador' | 'galeria' | 'video' | 'imprimir' | 'imagens') => void;
   onPrintWorksheet: () => void;
 }
 
@@ -119,6 +119,16 @@ export const OfficialHeader: React.FC<OfficialHeaderProps> = ({
               }`}
             >
               🖼️ Galeria de Modelos
+            </button>
+            <button
+              onClick={() => onTabChange('imagens')}
+              className={`px-3 py-1.5 rounded-lg whitespace-nowrap transition-all cursor-pointer flex items-center gap-1.5 ${
+                activeTab === 'imagens'
+                  ? 'bg-indigo-600 text-white font-semibold shadow-xs'
+                  : 'text-slate-600 hover:text-indigo-700'
+              }`}
+            >
+              <span>🎨 Banco de Imagens (Passo 15)</span>
             </button>
             <button
               onClick={() => onTabChange('video')}

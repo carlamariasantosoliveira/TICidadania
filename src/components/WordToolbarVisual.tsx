@@ -12,6 +12,7 @@ export interface WordActionStep {
     | 'align-center'
     | 'page-borders'
     | 'new-page'
+    | 'insert-images'
     | 'save-padlet';
   highlightButtonName: string;
   simpleKidHint: string;
@@ -376,29 +377,74 @@ export const WordToolbarVisual: React.FC<{ action: WordActionStep }> = ({ action
         {currentTab === 'Inserir' && (
           <div className="flex flex-wrap items-stretch gap-4">
             {/* Group: Páginas (Quebra de Página) */}
-            <div className="bg-amber-50/70 border-amber-400 ring-2 ring-amber-300/80 p-2 rounded-lg border flex flex-col justify-between shadow-xs">
-              <div className="flex items-center gap-3">
-                <div className="bg-white border-2 border-blue-600 rounded-md p-1.5 shadow-xs flex flex-col items-center">
-                  <div className="flex items-center gap-1 mb-1">
-                    <div className="w-4 h-6 border border-slate-400 bg-white" />
-                    <span className="text-blue-600 text-xs font-bold">➔</span>
-                    <div className="w-4 h-6 border-2 border-blue-600 bg-blue-100" />
+            {action.iconType === 'new-page' && (
+              <div className="bg-amber-50/70 border-amber-400 ring-2 ring-amber-300/80 p-2 rounded-lg border flex flex-col justify-between shadow-xs">
+                <div className="flex items-center gap-3">
+                  <div className="bg-white border-2 border-blue-600 rounded-md p-1.5 shadow-xs flex flex-col items-center">
+                    <div className="flex items-center gap-1 mb-1">
+                      <div className="w-4 h-6 border border-slate-400 bg-white" />
+                      <span className="text-blue-600 text-xs font-bold">➔</span>
+                      <div className="w-4 h-6 border-2 border-blue-600 bg-blue-100" />
+                    </div>
+                    <span className="text-[10px] font-bold text-slate-900">Quebra de Página</span>
                   </div>
-                  <span className="text-[10px] font-bold text-slate-900">Quebra de Página</span>
+
+                  <div className="text-left text-xs">
+                    <span className="font-bold text-blue-900 block">Folha Nova em Branco</span>
+                    <span className="text-[10px] text-slate-500">
+                      Cria a folha número 2 para a placa de Plástico!
+                    </span>
+                  </div>
                 </div>
 
-                <div className="text-left text-xs">
-                  <span className="font-bold text-blue-900 block">Folha Nova em Branco</span>
-                  <span className="text-[10px] text-slate-500">
-                    Cria a folha número 2 para a placa de Plástico!
-                  </span>
+                <div className="text-[10px] text-center text-slate-500 font-semibold pt-1 border-t border-slate-200 mt-1">
+                  Páginas
                 </div>
               </div>
+            )}
 
-              <div className="text-[10px] text-center text-slate-500 font-semibold pt-1 border-t border-slate-200 mt-1">
-                Páginas
+            {/* Group: Ilustrações (Imagens / ClipArt / Formas) - HIGHLIGHTED FOR STEP 15! */}
+            {action.iconType === 'insert-images' && (
+              <div className="bg-amber-50/70 border-amber-400 ring-2 ring-amber-300/80 p-2 rounded-lg border flex flex-col justify-between shadow-xs">
+                <div className="flex items-center gap-3">
+                  {/* Botão Imagens */}
+                  <div className="bg-white border-2 border-blue-600 rounded-md p-2 shadow-xs flex flex-col items-center">
+                    <div className="w-8 h-8 rounded border border-blue-400 bg-blue-50 flex items-center justify-center text-lg mb-1 shadow-2xs">
+                      🖼️
+                    </div>
+                    <span className="text-[10px] font-bold text-blue-900">Imagens</span>
+                  </div>
+
+                  {/* Botão ClipArt */}
+                  <div className="bg-white border border-slate-300 rounded-md p-2 shadow-2xs flex flex-col items-center opacity-85">
+                    <div className="w-8 h-8 rounded border border-slate-300 bg-slate-50 flex items-center justify-center text-lg mb-1">
+                      🎨
+                    </div>
+                    <span className="text-[10px] font-bold text-slate-700">ClipArt</span>
+                  </div>
+
+                  {/* Botão Formas */}
+                  <div className="bg-white border border-slate-300 rounded-md p-2 shadow-2xs flex flex-col items-center opacity-85">
+                    <div className="w-8 h-8 rounded border border-slate-300 bg-slate-50 flex items-center justify-center text-lg mb-1">
+                      🔷
+                    </div>
+                    <span className="text-[10px] font-bold text-slate-700">Formas</span>
+                  </div>
+
+                  {/* Truque secreto de informática */}
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-2 text-xs text-blue-950">
+                    <span className="font-bold block text-blue-900">🌟 Segredo do 5.º Ano:</span>
+                    <span className="text-[11px] block text-slate-700">
+                      Clica na imagem com o botão direito ➔ <strong>Moldar Texto</strong> ➔ <strong>Em Frente do Texto</strong> (para a imagem mexer-se livremente sem fugir!).
+                    </span>
+                  </div>
+                </div>
+
+                <div className="text-[10px] text-center text-slate-500 font-semibold pt-1 border-t border-slate-200 mt-1">
+                  Ilustrações
+                </div>
               </div>
-            </div>
+            )}
           </div>
         )}
 

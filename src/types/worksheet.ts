@@ -42,6 +42,7 @@ export interface InstructionItem {
       | 'align-center'
       | 'page-borders'
       | 'new-page'
+      | 'insert-images'
       | 'save-padlet';
     highlightButtonName: string;
     simpleKidHint: string;

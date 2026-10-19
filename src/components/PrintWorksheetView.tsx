@@ -144,7 +144,7 @@ export const PrintWorksheetView: React.FC<PrintWorksheetViewProps> = ({ onBack }
             <li>Tipo de letra legível e tamanho adequado de placa (72pt+)</li>
             <li>Cores corretas: Azul (Papelão) e Amarelo com contraste (Plástico)</li>
             <li>Texto perfeitamente centrado (Ctrl + E)</li>
-            <li>Entrega com sucesso no Padlet da turma com identificação</li>
+            <li>Inserção criativa de imagens e símbolos de reciclagem (Passo 15)</li>
           </ul>
         </div>
 
