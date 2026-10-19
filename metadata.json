@@ -1,0 +1,6 @@
+{
+  "name": "Ficha de Trabalho - Elaboração de Ecopontos",
+  "description": "Ficha de trabalho enriquecida com exemplos práticos, simulador interativo de placas para Word e orientações passo a passo para a Escola Básica 2, 3 Fernando Pessoa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
